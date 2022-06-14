@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            }
+       *{ font-family: 'GmarketSansMedium';}
+        body{background-image: url(img/우주1.png); 
+            display: flex; flex-direction: column; width: 100vw;}
+
+        /* 행성로고제거
+        .logo img{width: 250px;  margin: auto; margin-top: 180px; position: relative; left:200px; top:100px} */
+        /* space로고 옆에 작게 
+        .logo img{width: 250px;  margin: auto; margin-top: 180px; position: relative; left:200px; top:180px; } */
+
+        .logo img{width:380px; position:relative; left:630px; top:50px; margin-top: 180px;}
+        /* .search { width: 800px; display: block; margin: auto; display: flex;margin-top: 110px; } */
+        #search{margin:auto; height: 55px; width: 800px; margin-top: 80px;
+            background-color: white; border: #97d7fe 3px solid; border-radius: 20px; display: flex;}
+        #search input{width: 800px; height: 30px;border:none; border-radius:20px;
+            font-size: 30px;text-align: center; position: relative; top:15px;z-index:50;} 
+        #search input:focus{outline: unset;}
+        #search button{border: none; background-color:unset; display: flex; align-items: center;}
+        #search button img{width: 40px; height: 41px; margin-right: 3px;}
+    
+
+        .tag{margin: auto;font-size: 15px; padding: 20px;}
+        .tag1{color:white; border-radius: 10px;}
+        .tag1:hover {font-size:20px ;}
+    
+        a{text-decoration: none; color: white;float:right; margin-right: 30px;}
+        a:hover{text-decoration: underline;}
+        footer{height: 50px;}
+        footer div{color: white; margin-left: 35px; margin-top: 350px; text-align: center;}
+        
+    
+    </style>
+</head>
+<body>
+    <div><a href="">로그인</a></div>
+
+        <div class="logo">
+            <img src="img/로고배경제거.png" alt="">
+        </div>
+    
+        <div id="search">
+            <input type="text" placeholder="오늘은 어디로 떠나볼까요?">
+            <button><img src="img/검색버튼.png"></button>
+        </div>
+
+    <div class="tag">
+        <span class="tag1">#데이트</span>&emsp;&ensp;
+        <span class="tag1">#친구랑</span>&emsp;&ensp;
+        <span class="tag1">#핫플레이스</span>&emsp;&ensp;
+        <span class="tag1">#맛집</span>&emsp;&ensp;
+        <span class="tag1">#서울</span>&emsp;&ensp;
+        <span class="tag1">#홍대</span>&emsp;&ensp;
+        <span class="tag1">#전시회</span>&emsp;&ensp;
+        <span class="tag1">#카페</span>&emsp;&ensp;
+        <span class="tag1">#한강</span>&emsp;&ensp;
+        <span class="tag1">#기념일</span>&emsp;&ensp;
+    
+    </div>
+    <footer>
+        <div>
+            COPYRIGHT ⓒ 2022 by oziizi ALL RIGHTS RESERVED
+        </div>
+            
+    </footer>
+
+</body>
+</html>
