@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* 폰트 */
+        @font-face {
+            font-family: 'GmarketSansLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *{margin: 0; padding: 0; font-family: 'GmarketSansMedium';}
+        a{text-decoration: none; color: black;}
+
+        /* 로고, 검색 */
+        header div{display: flex; justify-content: space-evenly; align-items: center; margin: 10px;}
+        header div a{font-family: 'GmarketSansMedium'; font-size: 20px;}
+        #logo img{width:200px; height: 64px;}
+        #search{height: 55px; width: 40vw; border: #97d7fe 1px solid; border-radius: 20px; display: flex; align-items: center; justify-content: space-around;}
+        #search input{width: 80%; border: none; font-size: 18px;}
+        #search input:focus{outline: unset;}
+        #search button{border: none; background-color:unset; display: flex; align-items: center;}
+        #search button img{width: 40px; height: 41px;}
+
+        /* 네비게이션바 */
+        nav{display: flex; justify-content:center; align-items: center; height: 60px;}
+        ul{list-style: none; display: flex; width: 25vw; justify-content: space-evenly;}
+        li{width: 90px; text-align: center;}
+        li a{font-size: 19px;}
+        #login{font-size: 20px;}
+        
+        /* 카테고리 */
+        section hr{border-color: #e2e2e2; border-top: 0px;}
+        li hr{width: 50%; position: relative; left: 22%; top: -10%; z-index: -5; border:3px solid; border-color: #97d7fe;}
+        #spaceNav{margin-top: 20px;}
+        #spaceNav ul{justify-content: space-evenly;}
+        #spaceNav ul li{font-size: 25px; margin: 0px -70px;}
+
+        /* 카테고리 하위 네비 */
+        #spaceSmallNav{height: 80px;}
+        #spaceSmallNav ul{width: 80vw;}
+        #spaceSmallNav li a{display: flex; flex-direction: column; justify-content: center; align-items: center;}
+        #spaceSmallNav a{font-family: 'GmarketSansLight';}
+        #spaceSmallNav img{width: 55px; height: 55px;}
+
+        /* space 메뉴들 */
+        #spaceMenu{width: 91vw; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; align-items: center; justify-items: center;}
+        .spaceSumMenu{width: 90%; height: 40vh; margin: 3vh 10px;}
+        .spaceImgMenu{background-image: url(img/데이트레스토랑.jpg); background-size: cover; border-bottom: none; border-radius: 20px 20px 0 0; height: 70%; width: 100%; box-shadow: rgb(124, 124, 124) 2px 2px 4px;}
+        .spaceTextMenu{border: #97d7fe 1px solid; border-radius: 0 0 20px 20px; background-color: #97d7fe; height: 30%; display: flex; justify-content: center; align-items: center; box-shadow: rgb(124, 124, 124) 2px 2px 4px;}
+        .spaceTextMenu p{color: white; font-size: 30px; font-weight: 700;}
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <div id="logo"><a href="#"><img src="img/로고+이름.png" alt="로고"></a></div>
+            <nav>
+                <ul>
+                    <li><a id="space" href="">SPACE</a></li>
+                    <li><a href="">커뮤니티</a></li>
+                    <li><a href="">추천</a></li>
+                </ul>
+            </nav>
+            <div id="search">
+                <input type="text">
+                <button><img src="img/검색버튼.png"></button>
+            </div>
+            <div><a href="" id="login">로그인</a></div>
+        </div>
+    </header>
+    <section>
+        <hr>
+        <nav id="spaceNav">
+            <ul>
+                <li>EAT<hr></li>
+                <li>PLAY</li>
+                <li>CAFE</li>
+            </ul>
+        </nav>
+        <nav id="spaceSmallNav">
+            <ul>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+                <li><a href=""><img src="img/jigsaw.png">#어쩌구</a></li>
+            </ul>
+        </nav>
+        <!-- <hr> -->
+        <article id="spaceMenu">
+            <div class="spaceSumMenu">
+                <div class="spaceImgMenu"></div>
+                <div class="spaceTextMenu"><p>레스토랑</p></div>
+            </div>
+            <div class="spaceSumMenu">
+                <a href="">
+                    <div class="spaceImgMenu"></div>
+                    <div class="spaceTextMenu"><p>레스토랑</p></div>
+                </a>
+            </div>
+            <div class="spaceSumMenu">
+                <div class="spaceImgMenu"></div>
+                <div class="spaceTextMenu"><p>레스토랑</p></div>
+            </div>
+        </article>
+    </section>
+    <footer></footer>
+</body>
+</html>

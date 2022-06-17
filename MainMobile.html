@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* 폰트 */
+        @font-face {
+            font-family: 'GmarketSansLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *{margin: 0; padding: 0; font-family: 'GmarketSansMedium';}
+        body{max-width: 768px; min-width: 0px; margin: 0 auto;}
+        a{text-decoration: none; color: black;}
+
+        /* 로고, 검색 */
+        header div{display: flex; justify-content: space-evenly; align-items: center; margin: 10px;}
+        #logo img{width:70px; height: 22px;}
+        #search{height: 30px; width: 40vw; border: #97d7fe 1px solid; border-radius: 12px; display: flex; align-items: center; justify-content: space-around;}
+        #search input{width: 80%; border: none; font-size: 12px;}
+        #search input:focus{outline: unset;}
+        #search button{border: none; background-color:unset; display: flex; align-items: center;}
+        #search button img{width: 20px; height: 19px;}
+        header hr{border-color: #e2e2e2; border-top: 0px;}
+
+        /* 네비게이션바 */
+        nav{display: flex; justify-content:center; align-items: center; height: 40px;}
+        ul{list-style: none; display: flex; width: 100%; justify-content: space-evenly;}
+        li{width: 50px; text-align: center;}
+        li a{font-family: 'GmarketSansMedium'; font-size: 3px;}
+        #login{font-size: 4px;}
+        
+        /* 배너 */
+        #banner{position: relative; overflow: hidden;}
+        #banner>div:nth-child(1){width: 500%; height: 25vh; display: flex;}
+        #banner>div:nth-child(1)>img{width: 100vw; height: 100%; object-fit: cover;}
+        #opaBlack{width: 100%; height: 100%; background-color: rgba(71, 71, 71, 0.2); position: absolute; left: 0; top: 0;}
+        /* 배너 화살표 */
+        #bannerArrow{width: 94%; position: absolute; left: 2.5%; top: 40%; display: flex; justify-content: space-between;}
+        #bannerArrow img{width: 50%; height: 4vh;}
+        /* 배너 안에 글자 */
+        #bannerP{width: 30%; position: absolute; left: 15%; top:40%}
+        #bannerP :nth-child(1){font-size: 28px; font-family: 'GmarketSansBold'; color: white;}
+        #bannerP :nth-child(2){font-size: 10.5px; font-family: 'GmarketSansLight'; color: white;}
+        /* 배너 버튼 */
+        #bannerButtons{width: 20%; position: absolute; left: 40%; bottom: 3vh; display: flex; justify-content: space-evenly;}
+        .circleButton{width: 0.2em; height: 0.2em; border: 1px solid white; border-radius: 50%; background-color: white;}
+
+        /* 커뮤니티, 추천 공통 css */
+        .articleBox{width: 89%; margin: 30px auto; display: flex; flex-direction: column;}
+        .articleBox>p{font-family: 'GmarketSansBold'; font-size: 15px; margin-left: 0.25vw; color: #575757;}
+        .articleBox>hr{width: 16%; border:2px solid; border-color: #8A94FF; margin-bottom: 10px;}
+
+        /* 추천 */
+        #recommend>hr{width: 7.4%;}
+        #recommend>div{display: flex; justify-content: space-between;}
+        #recommend>div>div:nth-child(1){width: 65%; position: relative;}
+        #recommend>div>div img{border-radius: 12px;}
+        #recommend>div>div>p{position: absolute; bottom: 10%; right: 7%; color: white; font-size: 12px;}
+        #recomBox{width: 100%; height: 100%; border-radius: 12px; background-color: rgba(71, 71, 71, 0.2); position: absolute; left: 0; top: 0;}
+        #recommend>div>div{width: 30%; display: flex; flex-direction: column; justify-content: space-evenly; background-color: #8A94FF; border-radius: 12px;}
+        #recommend>div>div>div{display: flex; align-items: center;}
+        #recommend>div>div>div p{font-family: 'GmarketSansLight'; font-size: 8px; color: white; margin-left: 15%; position: relative;}
+        #recommendBox{width: 80%; height: 10%;background-color: white; border-radius: 25px; margin-left: 10%;}
+        #recommendBox>p:nth-child(1){font-family: 'GmarketSansBold'; color: #8A94FF; margin-left: 6.2%;}
+
+        /* SPACE */
+        #spaceMenu{width: 91%; margin: 30px auto; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: auto; align-items: center; justify-items: center;}
+        #spaceMenu>p{grid-column: 1/5; justify-self: left; margin-left: 1.5vw; font-family: 'GmarketSansBold'; font-size: 15px; color: #575757;}
+        #spaceMenu>hr{grid-column: 1/5; justify-self: left; margin-left: 1.25vw; width: 16%; border:2px solid; border-color: #8A94FF;}
+        .spaceSumMenu{width: 90%; height: 10vh; margin: 10px;}
+        .spaceImgMenu{height: 84%; width: 100%; border-radius: 10px; object-fit: cover; box-shadow: rgb(124, 124, 124) 2px 2px 4px;}
+        .spaceText{height: 35%; display: flex; justify-content: center; align-items: center; font-size: 10px; font-weight: 700; font-family: 'GmarketSansLight';}
+
+        /* 커뮤니티 */
+        #community>div{display: flex; flex-wrap: wrap; justify-content: space-between;}
+        #community>div>div{position: relative; width: 45%;}
+        #community>div>div>img{width: 100%; height: 12.1vh; object-fit: cover; border-radius: 10px;}
+        #community>div>div>p{position: absolute; bottom: 10%; right: 10%; color: white; font-size: 1.5vw;}
+        .communityBox{width: 89vw !important; display: flex; flex-direction: column; justify-content: space-between; margin-top: 2px;}
+        .communityBox>hr{border: 1px solid #8A94FF; border-bottom: 1px; margin: 2px 0;}
+        .communityBox>div{display: flex; justify-content: space-between; align-items: center; width: 100% !important;}
+        .communityBox>div>div{font-family: 'GmarketSansLight'; font-size: 0.83vw;}
+        .communityBox>div:nth-child(1){font-family: 'GmarketSansMedium';}
+        .communityBox>div>div:nth-child(even){color: rgb(139, 139, 139);}
+        .communityBox>div:nth-child(1)>div:nth-child(1){font-family: 'GmarketSansMedium'; font-size: 3px;}
+        .communityBox>div:nth-child(1)>div:nth-child(even){color: black; font-family: 'GmarketSansMedium'; font-size: 3px;}
+
+        /* 푸터 */
+        footer{height: 8vh; padding-left: 5%; background-color: #8A94FF; display: flex; flex-direction: column; justify-content: center; color: white;}
+        footer p{font-family: 'GmarketSansLight'; font-size: 5px;}
+        footer div{margin-bottom: 3px;}
+        footer div p{font-family: 'GmarketSansBold'; font-size: 12px;}
+        footer div p:nth-child(2){font-size: 8px;}
+
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <div id="logo"><a href="Main.html"><img src="img/로고+이름.png" alt="로고"></a></div>
+
+            <div id="search">
+                <input type="text">
+                <button><img src="img/검색버튼.png"></button>
+            </div>
+            <div><a href="" id="login">로그인</a></div>
+        </div>
+        <hr>
+        <nav>
+            <ul>
+                <li><a id="space" href="Space.html">스페이스</a></li>
+                <li><a href="">커뮤니티</a></li>
+                <li><a href="">추천</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article id="banner">
+            <div>
+                <img src="img/구름1.png">
+                <img src="img/구름1.png">
+                <img src="img/구름1.png">
+                <img src="img/구름1.png">
+                <img src="img/구름1.png">
+            </div>
+            <div id="opaBlack"></div>
+            <div id="bannerArrow">
+                <div class="arrow"><img src="img/arrow_back.png"></div>
+                <div class="arrow"><img src="img/arrow_forward.png"></div>
+            </div>
+            <div id="bannerP">
+                <p>SPACE</p>
+                <p>우리가 꿈꾸던 장소 찾기</p>
+            </div>
+            <div id="bannerButtons">
+                <div class="circleButton"></div>
+                <div class="circleButton"></div>
+                <div class="circleButton"></div>
+                <div class="circleButton"></div>
+                <div class="circleButton"></div>
+            </div>
+        </article>
+        <article class="articleBox" id="recommend">
+            <p>추천</p>
+            <hr>
+            <div>
+                <div>
+                    <img src="img/친구들식당.jpg">
+                    <div id="recomBox"></div>
+                    <p>최고의 맛집</p>
+                </div>
+                <div>
+                    <div id="recommendBox"><p>최고의 맛집</p></div>
+                    <div><p>숨겨진 맛집</p></div>
+                    <div><p>오붓한 장소</p></div>
+                    <div><p>디저트 맛집</p></div>
+                    <div><p>최고의 방탈출</p></div>
+                </div>
+            </div>
+        </article>
+        <article id="spaceMenu">
+            <p>스페이스</p>
+            <hr>
+            <div class="spaceSumMenu">
+                <a href="Space장소페이지.html">
+                    <img src="img/데이트레스토랑.jpg" class="spaceImgMenu">
+                    <p class="spaceText">레스토랑</p>
+                </a>
+            </div>
+            <div class="spaceSumMenu">
+                <a href="Space장소페이지.html">
+                    <img src="img/카페.jpg" class="spaceImgMenu">
+                    <p class="spaceText">레스토랑</p>
+                </a>
+            </div>
+            <div class="spaceSumMenu">
+                <a href="Space장소페이지.html">
+                    <img src="img/카페2.png" class="spaceImgMenu">
+                    <p class="spaceText">레스토랑</p>
+                </a>
+            </div>
+            <div class="spaceSumMenu">
+                <a href="Space장소페이지.html">
+                    <img src="img/카페3.jpg" class="spaceImgMenu">
+                    <p class="spaceText">레스토랑</p>
+                </a>
+            </div>
+            <div class="spaceSumMenu">
+                <a href="Space장소페이지.html">
+                    <img src="img/친구들식당2.jpg" class="spaceImgMenu">
+                    <p class="spaceText">레스토랑</p>
+                </a>
+            </div>
+            <div class="spaceSumMenu">
+                <a href="Space장소페이지.html">
+                    <img src="img/친구들식당3.jpg" class="spaceImgMenu">
+                    <p class="spaceText">레스토랑</p>
+                </a>
+            </div>
+            <div class="spaceSumMenu">
+                <a href="Space장소페이지.html">
+                    <img src="img/데이트레스토랑2.jpg" class="spaceImgMenu">
+                    <p class="spaceText">레스토랑</p>
+                </a>
+            </div>
+            <div class="spaceSumMenu">
+                <a href="Space장소페이지.html">
+                    <img src="img/밤데이트레스토랑2.jpg" class="spaceImgMenu">
+                    <p class="spaceText">레스토랑</p>
+                </a>
+            </div>
+        </article>
+        <article class="articleBox" id="community">
+            <p>커뮤니티</p>
+            <hr>
+            <div>
+                <div><img src="IMG/길거리식당.jpg"><p>여기 완전 맛난 레스토랑</p></div>
+                <div><img src="IMG/푸짐한식당.jpg"><p>여기 완전 맛난 레스토랑</p></div>
+                <div class="communityBox">
+                    <div>
+                        <div>게시판</div>
+                        <div class="communitySeeMore">더보기 ></div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div>어쩌구저쩌구어쩌구저쩌구</div>
+                        <div>2022.06.10</div>
+                    </div>
+                    <div>
+                        <div>어쩌구저쩌구어쩌구저쩌구</div>
+                        <div>2022.06.10</div>
+                    </div>
+                    <div>
+                        <div>어쩌구저쩌구어쩌구저쩌구</div>
+                        <div>2022.06.10</div>
+                    </div>
+                    <div>
+                        <div>어쩌구저쩌구어쩌구저쩌구</div>
+                        <div>2022.06.10</div>
+                    </div>
+                    <div>
+                        <div>어쩌구저쩌구어쩌구저쩌구</div>
+                        <div>2022.06.10</div>
+                    </div>
+                    <div>
+                        <div>어쩌구저쩌구어쩌구저쩌구</div>
+                        <div>2022.06.10</div>
+                    </div>
+                    <div>
+                        <div>어쩌구저쩌구어쩌구저쩌구</div>
+                        <div>2022.06.10</div>
+                    </div>
+                    <div>
+                        <div>어쩌구저쩌구어쩌구저쩌구</div>
+                        <div>2022.06.10</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div>
+            <p>SPACE</p>
+            <p>더욱 더 커질 개발자들의 모임</p>
+        </div>
+        <p>주소 : 어딜까? 아무도 모르지~</p>
+        <p>space@space.space</p>
+    </footer>
+</body>
+</html>
