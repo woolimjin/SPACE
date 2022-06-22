@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일 확인</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/findEmail.css">
+</head>
+<body>
+    <!-- 첫 번째 컨테이너-->
+    <div class="container">
+        <img src="img/로고2_누끼.png" alt="" class="logo_space">
+
+                <!--찾기 선택-->
+        <div class="row mb-5" id="top">
+            <div class="d-flex col-3 col-lg-6 w-50 id_line">
+            <img src="img/로그인.png" alt="" class="p-2 justify-content-start" id="login_icon">
+                <div class="col-4 justify-content-center text-center mt-3" id="find_id">아이디 찾기</div>
+            </div>
+            <div class="d-flex col-3 col-lg-6 w-50 pw_line">
+                <img src="img/자물쇠.png" alt="" class="p-2 justify-content-start" id="password_icon">
+                <div class="col-5 justify-content-center text-center mt-3" id="find_pw">비밀번호 찾기</div>
+            </div>
+        </div>
+        <!-- @@찾기 및 아래선 -->
+        <div class="col mb-3 find_pw">아이디 찾기</div>
+        <hr class="line1"><hr class="line2">
+
+    <!--두 번째 컨테이너-->
+        <div class="col-12 border border-3 w-100 container2">
+            <p class="text-center mt-5 p_user"><span class="username">임우진&nbsp;</span>님의 아이디는</p>
+            <p class="text-center  p-5 p_email">SPACE@SPACE.COM</p>
+            <input type="button" value="로그인" class="btn btn-primary login_btn">
+        </div>
+    </div>
+</body>
+</html>
