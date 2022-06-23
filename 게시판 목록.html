@@ -52,6 +52,13 @@
         #login{font-size: 20px;}
         section hr{border-color: #e2e2e2; border-top: 0px;}
 
+        /* 게시판, 칼럼 네비 */
+        section hr{border-color: #e2e2e2; border-top: 0px;}
+        li hr{width: 60%; position: relative; left: 16%; top: -100%; z-index: -5; border:3px solid; border-color: #97d7fe;}
+        #spaceNav{margin-top: 40px; height: 45px;}
+        #spaceNav ul{justify-content: space-evenly; width: 500px;}
+        #spaceNav ul li{font-size: 25px; margin: 0px -70px;}        
+
         /* 인기순, 글쓰기 버튼 */
         section>div{width: 768px; display: flex; justify-content: space-between; margin: 5vh auto;}
         section>div>p{width: 5.2vw; height: 1.9vw; border: #8A94FF 1px solid; border-radius: 15px; text-align: center; vertical-align: middle; line-height: 2.1vw; font-size: 0.9vw; font-family: 'GmarketSansBold';}
@@ -112,6 +119,12 @@
     </header>
     <section>
         <hr>
+        <nav id="spaceNav">
+            <ul>
+                <li>게시판<hr></li>
+                <li>칼럼</li>
+            </ul>
+        </nav>
         <div>
             <p>인기순 <img src="img/arrow_bottom.png"></p>
             <p>글쓰기</p>
