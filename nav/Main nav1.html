@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        *{margin: 0; padding: 0; font-family: 'Nanum Gothic Coding', monospace; font-family: 'Noto Sans KR', sans-serif;}
+        a{text-decoration: none; color: black;}
+
+        header div{display: flex; justify-content: space-around; align-items: center; margin: 10px;}
+        #logo img{width:200px; height: 64px;}
+        #search{height: 55px; width: 700px; border: #97d7fe 1px solid; border-radius: 20px; display: flex; align-items: center; justify-content: space-around;}
+        #search input{width: 80%; border: none; font-size: 18px;}
+        #search button{border: none; background-color:unset; display: flex; align-items: center;}
+        #search button img{width: 40px; height: 41px;}
+        header div:nth-child(3){font-size: 20px;}
+
+        /* nav{display: flex; margin: 15px 0;} */
+        nav{display: flex; justify-content:center; margin: 15px 0;}
+        /* ul{list-style: none; display: flex; width: 50vw; justify-content: space-evenly;} */
+        ul{list-style: none; display: flex; width: 50vw; justify-content: space-around;}
+        li{font-size: 19px;}
+        
+        #banner{position: relative;}
+        #banner img{width: 100vw; height: 80vh;}
+        #opaBlack{width: 100vw; height: 80vh; background-color: rgba(71, 71, 71, 0.4); position: absolute; left: 0; top: 0;}
+        #bannerArrow{width: 94vw; position: absolute; left: 3vw; top: 50%; display: flex; justify-content: space-between;}
+        #bannerArrow img{width: 2.5vw; height: 8vh;}
+
+        #bannerP{width: 30vw; position: absolute; left: 20%; top:45%}
+        #bannerP :nth-child(1){font-size: 70px; font-weight: 700; color: white;}
+        #bannerP :nth-child(2){font-size: 21.5px; color: white;}
+
+        #bannerButtons{width: 20vw; position: absolute; left: 40%; bottom: 3vh; display: flex; justify-content: space-evenly;}
+        .circleButton{width: 0.7vw; height: 0.7vw; border: 1px solid white; border-radius: 50%; background-color: white;}
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <div id="logo"><a href="#"><img src="img/로고+이름.png" alt="로고"></a></div>
+            <div id="search">
+                <input type="text">
+                <button><img src="img/검색버튼.png"></button>
+            </div>
+            <div><a href="">로그인</a></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">SPACE</a></li>
+                <li><a href="">커뮤니티</a></li>
+                <li><a href="">추천</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article id="banner">
+            <img src="img/구름1.png">
+            <div id="opaBlack"></div>
+            <div id="bannerArrow">
+                <div class="arrow"><img src="img/arrow_back.png" alt=""></div>
+                <div class="arrow"><img src="img/arrow_forward.png" alt=""></div>
+            </div>
+            <div id="bannerP">
+                <p>SPACE</p>
+                <p>우리가 꿈꾸던 장소 찾기</p>
+            </div>
+            <div id="bannerButtons">
+                <div class="circleButton"></div>
+                <div class="circleButton"></div>
+                <div class="circleButton"></div>
+                <div class="circleButton"></div>
+                <div class="circleButton"></div>
+            </div>
+        </article>
+        <article id="spaceMenu"></article>
+    </section>
+    <footer></footer>
+</body>
+</html>
