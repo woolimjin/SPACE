@@ -109,11 +109,13 @@ li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
-.like{
-    height: auto;
-    margin: 0;
+.inside_container{
+    position: relative;
+    height: 60vw;
+    margin-top : 2vw;
     padding: 0;
 }
 
@@ -125,18 +127,21 @@ li a{
     margin-top: 12vw;
     border-radius: 1rem;
 }
-.title, .icon{position: absolute; left: 6vw;}
+.title, .icon{
+    position: absolute;
+    left: 6vw;
+    }
 
 .icon{
-    width: 4vw;
-    margin-top: 4vw;
-    margin-left: 1.5rem;
+    width: 3vw;
+    margin-top: 4.5vw;
+    margin-left: 2.8vw;
 }
 
 .title{
     margin-top: 4vw;
     margin-left: 7vw;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 div>span>span {
@@ -152,9 +157,19 @@ div>span>span {
     color: #8A94FF;
 }
 
+.orderOne{
+    font-size: 1.2vw;
+    font-family: 'GmarketSansBold';
+}
+
+.order{
+    font-size: 1.2vw;
+    font-family: 'GmarketSansLight';
+}
+
 .rankFirst{
     display: inline-block;
-    width: 13vw;
+    width: 10vw;
     height: auto;
     text-align : center;
     font-family: 'GmarketSansBold';
@@ -166,10 +181,10 @@ div>span>span {
     display: flex;
     position: relative;
     left: 60vw;
-    font-size: 3vw;
+    font-size: 2.5vw;
     flex-direction: column;
     bottom: 39vw;
-    
+    text-align: justify;
 }
 
 .rank>span{
