@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* 폰트 */
+        @font-face {
+            font-family: 'GmarketSansLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{margin: 0; padding: 0; font-family: 'GmarketSansMedium';}
+        a{text-decoration: none; color: black;}
+
+        /* 로고, 검색 */
+        header div{display: flex; justify-content: space-evenly; align-items: center; margin: 10px;}
+        header div a{font-family: 'GmarketSansMedium'; font-size: 20px;}
+        #logo img{width:200px; height: 64px;}
+        #search{height: 55px; width: 40vw; border: #97d7fe 1px solid; border-radius: 20px; display: flex; align-items: center; justify-content: space-around;}
+        #search input{width: 80%; border: none; font-size: 18px;}
+        #search input:focus{outline: unset;}
+        #search button{border: none; background-color:unset; display: flex; align-items: center;}
+        #search button img{width: 40px; height: 41px;}
+
+        /* 네비게이션바 */
+        nav{display: flex; justify-content:center; align-items: center; height: 60px;}
+        ul{list-style: none; display: flex; width: 25vw; justify-content: space-evenly;}
+        li{width: 90px; text-align: center;}
+        li a{font-size: 19px;}
+        #login{font-size: 20px;}
+        section hr{border-color: #e2e2e2; border-top: 0px;}
+
+        /* footer */
+        footer{height: 14vh; padding-left: 95px; background-color: #8A94FF; display: flex; flex-direction: column; justify-content: center; color: white; margin-top:1000px;}
+        footer p{font-family: 'GmarketSansLight'; font-size: 12px;}
+        footer div{margin-bottom: 10px;}
+        footer div p{font-family: 'GmarketSansBold'; font-size: 25px;}
+        footer div p:nth-child(2){font-size: 15px;}
+
+        /* 칼럼이미지와 텍스트 */
+        .content img{width: 30vw; height:34vw;position: absolute;top:20%;left:20%;}
+        div img {width: 80px; height: 130px;}
+        .left{position: absolute; top:45%; left:10%}
+        .right{position: absolute; top:45%; right: 10%;}
+        .text{width: 23vw; position:absolute;left: 55vw;top:27vw; font-size:17px; text-align: center; color: #D3D3D3;}
+        .title{font-size:48px; position: absolute; left:61.5vw; top:30%;}
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <div id="logo"><a href="Main.html"><img src="img/space로고.png" alt="로고"></a></div>
+            <nav>
+                <ul>
+                    <li><a id="space" href="Space.html">스페이스</a></li>
+                    <li><a href="">커뮤니티</a></li>
+                    <li><a href="">추천</a></li>
+                </ul>
+            </nav>
+            <div id="search">
+                <input type="text">
+                <button><img src="img/검색버튼.png"></button>
+            </div>
+            <div><a href="" id="login">로그인</a></div>
+        </div>
+    </header>
+    <section>
+        <hr>
+            <div class="left"><img src="img/왼쪽.png" alt=""></div>
+            <div class="content">
+                <img src="img/칼럼음식점.jpg" alt="칼럼음식점">
+                <div class="title">
+                    TOP 1 <br> 스시로로
+                </div>
+                <div class="text">
+                    와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 
+                    또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다
+                    와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네
+                    와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네
+                    와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네
+                    와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 와 이거 너무 맛있다 또 먹고 싶네 
+                   
+                </div>
+            </div>
+            <div class="right"><img src="img/오른쪽.png" alt=""></div>
+        </div>
+      
+      
+    </section>
+    <footer>
+        <div>
+            <p>SPACE</p>
+            <p>더욱 더 커질 개발자들의 모임</p>
+        </div>
+        <p>주소 : 어딜까? 아무도 모르지~</p>
+        <p>space@space.space</p>
+    </footer>
+</body>
+</html>
