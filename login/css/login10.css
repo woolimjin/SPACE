@@ -28,6 +28,7 @@
     flex-direction: column;
     position: relative;
     left: 12vw;
+    object-fit:cover; 
 }
 
 
