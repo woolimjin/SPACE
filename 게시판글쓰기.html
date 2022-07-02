@@ -53,61 +53,63 @@
         hr{border-color: #e2e2e2; border-top: 0px;}
 
         /* 게시판 */
-        article{border-radius:30px;border-color:#e2e2e2; width:60vw; height: 108vw;margin: 0 auto; margin-top : 8vw;  margin-bottom:5vw;border: 1.5px solid rgba(217,217,217,1);}
+        article{border-radius:30px;border-color:#e2e2e2; width:60vw; height: 109vw;margin: 0 auto; margin-top : 3vw;  margin-bottom:5vw;border: 1.5px solid rgba(217,217,217,1);}
         #top hr{width:52vw; background-color: #e2e2e2;}
         #top{display: flex;  flex-direction: column; position: relative; left: 5rem;}
         #top img{width: 50px; height: 50px;}
-        #top1{width:50vw;display: flex; justify-content:flex-start;}
+        #top1{width:50vw;display: flex; justify-content:flex-start;margin-top: 1vw;margin-left: 0.5vw;}
+        #top1 img{width: 60px;height: 60px;}
         #name{font-size: 20px;}
-        #date{font-size: 14px; font-family: medium;}
-        #icon1{display:flex;flex-direction: column;margin-left: 1vw;}
-        .views{position: absolute;left: 48vw;bottom:1vw;font-size: 14px;font-family: medium;display: flex;}
-       
+        #date{font-size: 14px;  font-family: 'GmarketSansLight';}
+        #icon1{display:flex;flex-direction: column;margin-left: 1vw;margin-top: 0.3vw;}
+        .views{position: absolute;left: 48vw;bottom:1vw;font-size: 14px;display: flex;}
+        .views div:nth-child(1){font-family: 'GmarketSansLight';}
+        #title{font-size: 36px;  font-family: 'GmarketSansBold';margin-left:1vw;margin-top: 2vw;}
 
 
         /* 이미지와 리뷰 */
-        #title{font-size: 36px; font-weight: bold; margin: 50px; position: relative; right: 2rem;}
-        #content{text-align : center;}
-        #content img{width: 570px; height: 340px; padding:30px;}
-        #review1, #review2{color:#57525285; width: 47vw; margin: 0 auto; line-height: 1.5rem; text-align: left;padding: 20px;}
-        #review3{color:#57525285; position: relative; left: 40%; width: 28.5vw;line-height: 1.5rem; text-align: left; bottom: 13.3rem;padding: 20px;}
-        #img2{margin-left: 7.5rem; width: 314px; height: 185px;}
-   
-        
-     
-        
+        #board1{display: flex; flex-direction: column; align-items: center; margin-top: 2vw;} 
+        #board1 img{width: 30vw; height: 20vw;}
+        #review1{margin-top: 3vw;width: 45vw; height: 7vw; font-family: 'GmarketSansLight';}
+        #board2{display: flex; flex-direction: row; justify-content: center;margin-top: 2vw;}
+        #board2 img{width: 18vw; height: 10vw;}
+        #review2{width: 30vw; height: 7vw; margin-left: 2vw; margin-top: 1.5vw; font-family: 'GmarketSansLight';}
 
         /* 태그버튼 */
-        #tag{margin-left: 50px; padding: 20px; margin-bottom: 30px;}
-        #tag button{padding: 5px;}
-        #tag > button{border-radius: 30px; border-color: #8A94FF;border-width:1px; background-color: rgb(251, 247, 247); color: #8A94FF;
-            position: relative; top:-9vw; left:2.5vw; font-family: light; font-size: 16px;}
+        /* #tagicon{display: inline-block;} */
+        #tagicon{margin-left: 4.5vw;margin-top: 3vw;display: flex; justify-content: space-between;}
+        #icon2 img{width: 40px; height: 40px;}
+        #tag button{border-radius: 30px; border-color: #8A94FF;border-width:1px; background-color: rgb(251, 247, 247); color: #8A94FF;
+                    font-family: light; font-size: 16px; height: 1.5vw;padding:3px 8px 8px 8px;} 
         #tag > button:hover{background-color: #8A94FF; color:white;}
-        #icon3 img{width: 43px;height: 43px;}
-        #icon3{display: flex; position: relative; bottom: 16vh; left: 30vw;}
-        #tagicon{display: flex; justify-content: left; width:50vw;}
-      
+        #icon2{margin-right: 4.5vw; margin-top: -0.5vw;}
+        #hr hr{width:52vw; background-color: #e2e2e2;margin: 0 auto;margin-top: 2vw;}
 
 
         /* 댓글창 */
-        #comments_section{margin-top: 5vw;}
-        #txt{font-size: 36px; font-weight: bold; color: #8A94FF;margin-left: 100px; padding: 20px;margin-top: -220px;}
-        #icon2{display: flex;margin-left: 45px;}
-        #icon2 p{margin-top: 20px;}
-        #icon2 img{width: 50px; height: 50px;margin-left: 50px;padding:5px}
-        #icon4 img{width: 50px; height: 50px;margin-left: 10px;padding:5px}
-        #icon4{display: flex;}
-        #icon4 p{margin-top: 20px;}
-        #comment1{color:#57525285; width: 47vw; margin: 0 auto; line-height: 1.5rem; text-align: left;}
-        #comment2{color:#57525285; width: 43vw; margin: 0 auto; line-height: 1.5rem; text-align: left;margin-top: -17px;}
-        #comment1 button{border-radius: 30px; border-color: #8A94FF; background-color: rgb(251, 247, 247); color: #8A94FF;border-width:1px;font-size: 14px; width: 74px; height: 27px;}
-        #comment2 button{border-radius: 30px; border-color: black; background-color:#E1E3FC; color: black; border-width:1px;font-size: 14px; width: 74px; height: 27px;}
-        #comment_box{border-radius: 30px; background-color: #E1E3FC; width:45vw; height: 173px; margin-left: 8vw; margin-top: 2vw;} 
-        #comment_wr{width: 47vw; margin: 0 auto;margin-top:20px;padding:5px;height:38px;font-size:20px; color:D9D9D9;border-radius:15px;border:3px solid #8A94FF;display: flex;}
-        #comment_wr input{width: 47vw; border: none; font-size: 20px;margin-top: 7px;justify-content: space-between;}
+        #txt{font-size: 36px;color: #8A94FF; font-family: 'GmarketSansBold';margin-left: 4vw;margin-top: 2vw;}
+        #icon3 img,#icon4 img{width:40px; height: 40px;}
+        #icon3{display: flex; margin-left: 3.9vw; margin-top: 1vw;}
+        #icon4{display: flex; margin-left: 0.5vw; padding: 0.5vw;}
+        #icon3 p, #icon4 p{margin-top:0.4vw;}
+        #comment1{margin-left: 4.2vw; margin-top: 0.5vw; width: 51vw; height: 6vw; font-family: 'GmarketSansLight';}
+        #comment2{margin-left: 2vw;width: 46vw; height: 4vw; font-family: 'GmarketSansLight';}
+        #comment_section button{border-radius: 30px; border-color: #8A94FF; background-color: rgb(251, 247, 247); color: #8A94FF;
+            border-width:1px;font-size: 14px; width: 74px; height: 27px; margin-top:0.5vw;margin-left: 4.2vw;justify-content: flex-end;}
+        #comment_box button{border-radius: 30px; border-color: black; background-color:#E1E3FC; color: black;
+            border-width:1px;font-size: 14px; width: 74px; height: 27px;margin-top:0.5vw;margin-left: 1.5vw;}
+        /* #comment_border{border-radius: 20px;border-color:black;width:50vw; height: 10vw; margin-top: 1vw;}  */
+        #comment_box{border-radius: 20px; background-color: #E1E3FC; width:50vw; height: 10vw; margin-left: 6vw; margin-top: 1vw;} 
+        #comment_wr{width: 50vw;height: 2.5vw; margin: 0 auto;margin-top:2.5vw;padding:5px;font-size:20px;
+                    color:#D9D9D9;border-radius:15px;border:3px solid #8A94FF;display: flex;flex-direction: row;}
+        #comment_wr input{width: 50vw; border: none; font-size: 20px;margin-top:0.2vw;justify-content: space-between;}
         #comment_wr input:focus{outline: unset;}
-        #comment_wr img {margin-top: -8px; width:70px; height: 49px; padding:0 !important;}
-        #mid hr{position: relative; top:-8vw;width:52vw; background-color: #e2e2e2; margin: 0 auto;}
+        #comment1_1{display: flex;justify-content: space-between; width: 55vw;}
+        #comment2_2{display: flex;justify-content: space-between; width: 48vw;}
+        #comment1_1 div{font-family: 'GmarketSansLight'; font-size: 12px;margin-top:1vw;}
+        #comment2_2 div{font-family: 'GmarketSansLight'; font-size: 12px;margin-top:1vw;}
+        #comment_wr input{margin-left: 1vw;}
+
 
        /* footer */
         footer{height: 14vh; padding-left: 95px; background-color: #8A94FF; display: flex; flex-direction: column; justify-content: center; color: white;}
@@ -115,7 +117,7 @@
         footer div{margin-bottom: 10px;}
         footer div p{font-family: 'GmarketSansBold'; font-size: 25px;}
         footer div p:nth-child(2){font-size: 15px;}
-    
+
     </style>
 </head>
 <body>
@@ -135,7 +137,7 @@
             </div>
             <div><a href="" id="login">로그인</a></div>
         </div>
-        
+
     </header>
     <hr>
     <article>
@@ -154,71 +156,58 @@
                 </div>
             <hr>
         </div>
-
-        <div id="content">
-            <img src="img/음식사진1.png" alt="음식사진">
+        <div id="board1">
+            <img src="img/음식사진1.png" alt="">
             <div id="review1">
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
+                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
+                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
             </div>
-            <div id="review2">
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
-                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
+            <div id="review1">
+                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
+                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
             </div>
         </div>
-        <img src="img/음식사진1.png" alt="음식사진" id="img2">
-        <div id="review3">
-            맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
-            맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛없어요 맛있어요 맛있어요 맛있어요 맛있어요
-            맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
-            맛있어요 맛없어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
-            맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛없어요 맛있어요 맛있어요
-            맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
-            맛있어요 맛있어요 맛있어요 맛없어요
+        <div id="board2">
+            <img src="img/음식사진2.png" alt="">
+            <div id="review2">
+                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
+                맛있어요맛있어요맛있어요맛있어요맛있어요맛있어요
+            </div>
         </div>
         <div id="tagicon">
-                <div id="tag">
+            <span id="tag">
                 <button >#지역</button>
                 <button>#음식점이름</button>
                 <button>#베트남음식</button>   
-            </div>
-            <div id="icon3">
+            </span>
+            <span id="icon2">
                 <img src="img/첨부파일.png" alt="첨부파일">
                 <img src="img/목록.png" alt="수정">
-            </div>
-        
+            </sapn>
         </div>
-        
-        <div id="mid">
-            <hr>    
-            <div id="comments_section">
-                <div id="txt">댓글</div>
-                <div id="icon2">
-                    <img src="img/사람1.png" alt="사람아이콘">
-                    <p>닉네임</p>
+        <div id="hr">
+            <hr>
+        </div>
+        <div id="comment_section">
+            <div id="txt">댓글</div>
+                <div>
+                    <div id="comment_border">
+                        <div id="icon3">
+                            <img src="img/사람1.png" alt="사람아이콘">
+                            <p>닉네임</p>
+                        </div>
+                        <div id="comment1">
+                            맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
+                            맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛없어요 맛있어요 맛있어요 맛있어요 맛있어요
+                        </div>
+                        <div id="comment1_1">
+                            <button>답글</button>
+                            <div>34분전</div>
+                        </div>
+                    </div>
                 </div>
-                <div id="comment1">
-                    맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
-                    맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛없어요 맛있어요 맛있어요 맛있어요 맛있어요
-                    맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
-                    맛있어요 맛없어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
-                    맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛없어요 맛있어요 맛있어요
-                    맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요 맛있어요
-                    맛있어요 맛있어요 맛있어요 맛없어요
-                    <p><button>답글</button></p>
-                </div>
-                
-                <div id="comment_box">
+            <div id="comment_box">
+                <div>
                     <div id="icon4">
                         <img src="img/사람2.png" alt="사람아이콘">
                         <p>닉네임</p>
@@ -226,16 +215,16 @@
                     <div id="comment2">
                         그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요
                         그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요
-                        그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요
-                        그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요 그래요
-                        그래요 그래요 그래요 그래요 
-                        <p><button>답글</button></p>
+                    </div>
+                    <div id="comment2_2">
+                        <button>답글</button>
+                        <div>34분전</div>
                     </div>
                 </div>
-                <div id="comment_wr">
-                    <input type="text" placeholder="댓글을 남겨요">
-                    <img src="img/댓글아이콘.png">
-                </div>
+            </div>
+            <div id="comment_wr">
+                <input type="text" placeholder="댓글을 남겨요">
+                <img src="img/댓글아이콘.png">
             </div>
         </div>
     </article>
