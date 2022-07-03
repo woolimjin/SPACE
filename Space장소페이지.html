@@ -85,6 +85,7 @@
         #rightArt>div:nth-child(3)>p{color: #8A94FF; font-size: 1.2vw;}
         #rightArt>div:nth-child(3)>hr{margin: 2px 0 12px 5vw; width: 80.5%;}
         #rightArt>div:nth-child(3)>p>span{font-family: 'GmarketSansBold';}
+        #moreReview{cursor: pointer;}
         #rightArt>div:nth-child(3)>div{height: 7.6vw; display: flex; flex-direction: column; justify-content: space-between;}
         #rightArt>div:nth-child(3)>div>p>span{font-family: 'GmarketSansLight'; font-size: 0.8vw;}
         #rightArt>div:nth-child(4){margin: 1vw 0 0 24vw; width: 30%; height: 3vw; border: #8A94FF 1px solid; border-radius: 35px; display: flex; justify-content: space-evenly; align-items: center; overflow: hidden; position: relative;}
@@ -96,6 +97,46 @@
         #rightArt>div:nth-child(4)>div>div>img{width: 1.7vw;}
         #rightArt>div:nth-child(5){margin: 1vw 0 0 23.9vw; width: 100%; height: 3.1vw; border: rgba(255, 255, 255,0.1) 1px solid; border-radius: 35px; position: absolute; bottom: -0.04vw; left: -0.03vw; z-index: -5; overflow: hidden;}
         #rightArt>div:nth-child(5)>div{width:30.3%; height: 3vw; position: absolute; bottom: -0.02vw; background-color: #8A94FF; border: #8A94FF 1px solid; border-radius: 35px; margin-left: -20vw;}
+        
+        /* 리뷰 더보기 */
+        /* 불투명 검은 배경 */
+        #blackBox{width: 100vw; height: 100vw; background-color: rgba(63, 63, 63, 0.4); position: fixed; top: 0; left: 0; display: none;}
+
+        /* 리뷰 박스 */
+        #formBox{width: 100%; padding-bottom: 3vh; position: absolute; top: 0; left: 0; display: none;}
+        .form{width:920px; height:auto; border-radius: 2rem; background-color: white; margin: 2% auto 0;}
+        .profile{width: 920px; height: 110px; text-align: center; color: #3f3f3f; margin-top: 3.5%;}
+
+        /* 리뷰 작성 유저 프로필 이미지 */
+        .pro1{width: 42px; height: 42px;}
+        .rfirst{width: 870px;}
+        .rfirst div{display: flex; height: 52px;}
+        .rfirst div p{display: flex; flex-direction: column; margin-left: 10px;}
+        .rfirst div p span:nth-child(2){font-size: 12px; font-family: 'GmarketSansLight'; color: #5e5e5e;}
+        .date{position: relative; left: 165%; color: #D5D5D5; font-family: 'GmarketSansLight';}
+
+        /* 리뷰 큰 한칸 */
+        .writer {font-family: 'GmarketSansLight'; margin: 0 0 3.5% 4.5%;}
+
+        /* 리뷰사진 사이즈 */
+        .rimg {width: 127px; height: 127px; margin-right: 5px; object-fit: cover;}
+
+        /* 문구 */
+        .content{color: black; font-family: 'GmarketSansLight'; width: 840px;}
+        .profile{width: 91%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
+        #head span{font-size: 30px;}
+        #head span:nth-child(1){font-family: 'GmarketSansBold';}
+        #head span:nth-child(2){color: #8A94FF; font-family: 'GmarketSansBold'; padding-left: 12px;}
+        .profile img{width: 30px;}
+        .profile img{cursor: pointer;}
+
+        /* 페이징 */
+        #pageIndex{width: 768px; margin: 0 auto; padding-bottom: 2vw;}
+        #pageIndex>div:nth-child(1){width: 70%; display: flex; justify-content: space-between; margin: 0 auto;}
+        #pageIndex>div:nth-child(1)>img{width: 1vw; height: 25px;}
+        #pageIndex>div:nth-child(1)>p{width: 80%; display: flex; justify-content: space-between; align-items: center;}
+        #pageIndex>div:nth-child(1)>p>a{font-size: 20px; font-family: 'GmarketSansLight'; margin: 0 auto;}
+        #pageIndex>div:nth-child(1)>p>a>strong{color:#8A94FF}
 
         /* footer */
         footer{height: 14vh; padding-left: 95px; background-color: #8A94FF; display: flex; flex-direction: column; justify-content: center; color: white;}
@@ -117,6 +158,14 @@
             $("#rightArt>div:nth-child(4)").mouseout(function(){
                 $("#rightArt>div:nth-child(4)>div").stop().fadeOut();
                 $("#rightArt>div:nth-child(5)>div").stop().animate({"margin-left":"-20vw"});
+            })
+            $("#moreReview").click(function(){
+                $("#blackBox").show()
+                $("#formBox").show()
+            })
+            $(".profile img").click(function(){
+                $("#blackBox").hide()
+                $("#formBox").hide()
             })
         })
     </script>
@@ -174,7 +223,7 @@
                     <p><img src="img/parking.png"><span>주차 가능</span></p>
                 </div>
                 <div>
-                    <p><span>리뷰</span><span>더보기 ></span></p>
+                    <p><span>리뷰</span><span id="moreReview">더보기 ></span></p>
                     <hr>
                     <div>
                         <p><span>여긴 내 인생 맛집</span><span>2022.06.14</span></p>
@@ -200,6 +249,56 @@
             </div>
         </article>
     </section>
+    <div id="blackBox"></div>
+    <div id="formBox">
+        <div class="form">
+            <div class="profile">
+                <p id="head"><span>리뷰</span><span>57</span></p>
+                <img src="img/close.png">
+            </div>
+            <div class="writer">
+                <div class="rfirst">
+                    <div><img src="img/profile.png" class="pro1"><p><span>닉네임</span><span>2022-06-20</span></p></div>
+                </div>
+                <div>
+                    <div><img src="img/친구들식당.jpg" class="rimg"><img src="img/친구들식당2.jpg" class="rimg"><img src="img/친구들식당3.jpg" class="rimg"></div>
+                </div>
+                <div>
+                    <div class="content">리뷰 내용</div>
+                </div>
+            </div>
+            <div class="writer">
+                <div class="rfirst">
+                    <div><img src="img/profile.png" class="pro1"><p><span>닉네임</span><span>2022-06-20</span></p></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div class="content">리뷰 내용</div>
+                </div>
+            </div>
+            <div class="writer">
+                <div class="rfirst">
+                    <div><img src="img/profile.png" class="pro1"><p><span>닉네임</span><span>2022-06-20</span></p></div>
+                </div>
+                <div>
+                    <div><img src="img/친구들식당.jpg" class="rimg"><img src="img/친구들식당2.jpg" class="rimg"><img src="img/친구들식당3.jpg" class="rimg"></div>
+                </div>
+                <div>
+                    <div class="content">리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 리뷰 내용 </div>
+                </div>
+            </div>
+            <article id="pageIndex">
+                <div>
+                    <img src="img/Arrow_prev_purple.png">
+                    <p><a href=""><strong>1</strong></a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a><a href="">6</a><a href="">7</a><a href="">8</a><a href="">9</a><a href="">10</a></p>
+                    <img src="img/Arrow_next_purple.png">
+                </div>
+            </article>      
+        </div>              
+    </div>
+</div>
     <footer>
         <div>
             <p>SPACE</p>
